@@ -13,5 +13,5 @@ public:
     inline string getData() { return this->data; }
     inline void setData(string value) { this->data = value; }
     inline Node* getNext() { return this->next; }
-    inline void setNext(Node* value) { this->next = value; }
+    inline void setNext(Node* node) { this->next = node; }
 };

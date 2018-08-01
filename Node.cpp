@@ -4,5 +4,5 @@
 
 Node::Node(string data)
 {
-    this->data = data;
+    this->setData(data);
 }

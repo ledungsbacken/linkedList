@@ -1,14 +1,24 @@
 #include <iostream>
 #include <string>
-// #include "Node.h"
+#include "Node.h"
 
 using namespace std;
 
 class LinkedList
 {
-public:
-    // Node* cursor;
-    // Node* temp;
-    // Node* head;
+private:
+    Node* cursor;
+    Node* temp;
+    Node* tail;
+    Node* head;
     int numberOfNodes = 0;
+public:
+    int getNumberOfNodes() { return this->numberOfNodes; }
+    void add(string data = "");
+    void remove(Node* node);
+    Node* get(int index);
+    Node* current();
+    void moveToNext();
+    void moveToHead();
+    void moveToTail();
 };

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "LinkedList.h"
-#include "Node.h"
 
 //#include <typeinfo>
 //typeid(variable).name
@@ -27,10 +26,19 @@ int main() {
 	//cout << "Hello World!" << endl;
 	LinkedList* linkedList;
 	linkedList = new LinkedList;
-	Node* node;
-	node = new Node;
-	cout << node->getData() << endl;
-	cout << linkedList->numberOfNodes << endl;
+	cout << linkedList->getNumberOfNodes() << endl;
+
+	linkedList->add("1");
+	linkedList->add("2");
+	linkedList->add("3");
+	linkedList->add("4");
+
+	linkedList->remove(linkedList->get(3));
+
+	linkedList->moveToHead();
+	for(int i = 0; i < linkedList->getNumberOfNodes(); i++) {
+		cout << linkedList->get(i)->getData() << endl;
+	}
 
 	return 0;
 	// node* n;
